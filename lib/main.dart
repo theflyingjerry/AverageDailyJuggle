@@ -58,7 +58,7 @@ class _ADJState extends State<ADJ> {
   setupFunction() async {
     Map holder = await initializer.readJSON();
 
-    holder['juggles'] != [] ? juggleList = [0] : juggleList = holder['juggles'];
+    holder['juggles'] == [] ? juggleList = [0] : juggleList = holder['juggles'];
     setState(() {
       average();
     });
